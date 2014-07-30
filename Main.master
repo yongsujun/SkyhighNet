@@ -1,0 +1,109 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Main.master.cs" Inherits="Main" %>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head id="Head1" runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <!-- Static navbar -->
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">SKYHIGH TRAFFIC</a>&nbsp;
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/Default.aspx">Home</a></li>
+            <!-- ADMIN DROPDOWN -->
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">ADMIN <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="/admin/userList.aspx">USERS</a></li>
+                <li><a href="/admin/priceView.aspx">PRICE INFO</a></li>
+                <li><a href="/admin/report.aspx">REPORT</a></li>                
+              </ul>
+            </li>
+            <!-- JOBS DROPDOWN -->
+            <li class="#">
+              <a href="/jobs" class="dropdown-toggle" data-toggle="dropdown">JOBS <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">ESTIMATE</a></li>
+                <li><a href="#">CURRENT JOBS</a></li>
+                <li><a href="#">COMPLETED JOBS</a></li>                
+              </ul>
+            </li>
+            <!-- EQUIPMENTS DROPDOWN -->
+            <li class="dropdown">
+              <a href="/equipments" class="dropdown-toggle" data-toggle="dropdown">EQUIPMENTS <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">IC CAMERA</a></li>
+                <li><a href="#">OD CAMERA</a></li>
+                <li><a href="#">ATC</a></li>
+                <li><a href="#">BLUETOOTH</a></li>                
+              </ul>
+            </li>
+            <!-- APPLICATION DROPDOWN -->
+            <li class="dropdown">
+              <a href="/applications" class="dropdown-toggle" data-toggle="dropdown">APPLICATIONS <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">TIME SHEET</a></li>
+                <li><a href="#">ODO METRE</a></li>
+                <li><a href="#">REWARD</a></li>                              
+              </ul>
+            </li>
+            <li><a href="/download">DOWNLOAD</a></li>
+            <li><a href="/message">MESSAGE</a></li>
+            <li><a href="/contact">CONTACT</a></li>            
+          </ul><br />
+          <ul class="nav navbar-nav navbar-right">
+              <asp:Label ID="lblLogin" runat="server" Text=""></asp:Label>        
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+
+    <div class="container">
+
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+      </div>
+
+    </div> <!-- /container -->
+
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/js/bootstrap.min.js"></script>
+  </body>
+</html>
